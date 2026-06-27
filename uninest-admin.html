@@ -584,7 +584,7 @@ tr:hover td{background:rgba(255,255,255,.02)}
         <div style="overflow-x:auto">
         <table>
           <thead><tr><th>University</th><th>Location</th><th>Contact</th><th>Students</th><th>Status</th><th>Joined</th><th>Actions</th></tr></thead>
-          <tbody id="uni-table">
+          <tbody id="uni-tbody">
             <tr><td><div class="td-name">University of Nairobi</div><div class="td-muted">uon.ac.ke</div></td><td>Nairobi CBD</td><td>registrar@uon.ac.ke</td><td><strong>882</strong></td><td><span class="status-pill pill-green">● Active</span></td><td class="td-muted">Jan 2025</td><td><button class="action-btn" onclick="toast('Editing UoN…')">Edit</button> <button class="action-btn danger" onclick="toast('Suspended UoN')">Suspend</button></td></tr>
             <tr><td><div class="td-name">Strathmore University</div><div class="td-muted">strathmore.edu</div></td><td>Madaraka, NBI</td><td>admin@strathmore.edu</td><td><strong>641</strong></td><td><span class="status-pill pill-green">● Active</span></td><td class="td-muted">Feb 2025</td><td><button class="action-btn" onclick="toast('Editing Strathmore…')">Edit</button> <button class="action-btn danger" onclick="toast('Suspended Strathmore')">Suspend</button></td></tr>
             <tr><td><div class="td-name">USIU Africa</div><div class="td-muted">usiu.ac.ke</div></td><td>Kasarani, NBI</td><td>info@usiu.ac.ke</td><td><strong>482</strong></td><td><span class="status-pill pill-green">● Active</span></td><td class="td-muted">Mar 2025</td><td><button class="action-btn" onclick="toast('Editing USIU…')">Edit</button> <button class="action-btn danger">Suspend</button></td></tr>
@@ -619,13 +619,7 @@ tr:hover td{background:rgba(255,255,255,.02)}
         <div style="overflow-x:auto">
         <table>
           <thead><tr><th>Student</th><th>University</th><th>Type</th><th>Plan</th><th>Verified</th><th>Registered</th><th>Actions</th></tr></thead>
-          <tbody>
-            <tr><td><div class="td-name">Amina Kamau</div><div class="td-muted">amina@uon.ac.ke</div></td><td>UoN · Law Y2</td><td><span class="tag">Local</span></td><td><span class="status-pill pill-gold">Premium</span></td><td><span class="status-pill pill-green">✓ ID</span></td><td class="td-muted">Mar 12</td><td><button class="action-btn">View</button> <button class="action-btn danger">Suspend</button></td></tr>
-            <tr><td><div class="td-name">Priya Sharma</div><div class="td-muted">priya@strathmore.edu</div></td><td>Strathmore · MBA</td><td><span class="tag">International</span></td><td><span class="status-pill pill-blue">Free</span></td><td><span class="status-pill pill-amber">⏳ Pending</span></td><td class="td-muted">Jun 10</td><td><button class="action-btn success" onclick="toast('Verified Priya')">Verify</button> <button class="action-btn danger">Suspend</button></td></tr>
-            <tr><td><div class="td-name">Marcus Oduya</div><div class="td-muted">marcus@usiu.ac.ke</div></td><td>USIU · Comms Y3</td><td><span class="tag">International</span></td><td><span class="status-pill pill-gold">Premium</span></td><td><span class="status-pill pill-green">✓ ID</span></td><td class="td-muted">Apr 5</td><td><button class="action-btn">View</button> <button class="action-btn danger">Suspend</button></td></tr>
-            <tr><td><div class="td-name">James Mutua</div><div class="td-muted">james@ku.ac.ke</div></td><td>KU · Engineering Y3</td><td><span class="tag">Local</span></td><td><span class="status-pill pill-blue">Free</span></td><td><span class="status-pill pill-green">✓ ID</span></td><td class="td-muted">May 20</td><td><button class="action-btn">View</button> <button class="action-btn danger">Suspend</button></td></tr>
-            <tr><td><div class="td-name">Fatuma Hassan</div><div class="td-muted">fatuma@uon.ac.ke</div></td><td>UoN · Medicine Y1</td><td><span class="tag">Local</span></td><td><span class="status-pill pill-blue">Free</span></td><td><span class="status-pill pill-red">✕ Flagged</span></td><td class="td-muted">Jun 18</td><td><button class="action-btn">Review</button> <button class="action-btn danger" onclick="toast('Fatuma suspended')">Suspend</button></td></tr>
-          </tbody>
+          <tbody id="students-tbody">
         </table>
         </div>
       </div>
@@ -643,13 +637,8 @@ tr:hover td{background:rgba(255,255,255,.02)}
         </div>
         <div style="overflow-x:auto">
         <table>
-          <thead><tr><th>Hostel</th><th>Location</th><th>Landlord</th><th>Rooms</th><th>Slots</th><th>Status</th><th>Actions</th></tr></thead>
-          <tbody>
-            <tr><td><div class="td-name">Sunrise Student Hostel</div><div class="td-muted">Near UoN · Westlands</div></td><td>Westlands</td><td>Mr. Kamau</td><td>24</td><td><span style="color:var(--green);font-weight:600">8 open</span></td><td><span class="status-pill pill-amber">⏳ Pending</span></td><td><button class="action-btn success" onclick="approve(this,'Sunrise Hostel')">✓ Approve</button> <button class="action-btn danger" onclick="reject(this)">Reject</button></td></tr>
-            <tr><td><div class="td-name">Garden View Studio</div><div class="td-muted">Near Strathmore · Kileleshwa</div></td><td>Kileleshwa</td><td>Mrs. Njoki</td><td>6</td><td><span style="color:var(--amber);font-weight:600">1 open</span></td><td><span class="status-pill pill-green">● Active</span></td><td><button class="action-btn">Edit</button> <button class="action-btn danger">Remove</button></td></tr>
-            <tr><td><div class="td-name">Parklands Shared House</div><div class="td-muted">Near UoN · Parklands</div></td><td>Parklands</td><td>John Otieno</td><td>12</td><td><span style="color:var(--green);font-weight:600">5 open</span></td><td><span class="status-pill pill-green">● Active</span></td><td><button class="action-btn">Edit</button> <button class="action-btn danger">Remove</button></td></tr>
-            <tr><td><div class="td-name">Elm Court Residence</div><div class="td-muted">Near USIU · Kasarani</div></td><td>Kasarani</td><td>Elm Properties Ltd</td><td>40</td><td><span style="color:var(--red);font-weight:600">0 open</span></td><td><span class="status-pill pill-red">● Reported</span></td><td><button class="action-btn">Review</button> <button class="action-btn danger" onclick="toast('Elm Court suspended pending investigation')">Suspend</button></td></tr>
-          </tbody>
+          <thead><tr><th>Listing</th><th>University</th><th>Rent</th><th>Gender</th><th>Slots</th><th>Status</th><th>Actions</th></tr></thead>
+          <tbody id="listings-tbody">
         </table>
         </div>
       </div>
@@ -877,13 +866,8 @@ tr:hover td{background:rgba(255,255,255,.02)}
         <div class="table-header"><div class="table-title">🔑 Landlords & Agents</div><div class="table-actions"><input class="table-search" placeholder="Search…"><button class="action-btn primary" onclick="openModal('add-landlord-modal')">+ Add Landlord</button></div></div>
         <div style="overflow-x:auto">
         <table>
-          <thead><tr><th>Name</th><th>Contact</th><th>Properties</th><th>Total rooms</th><th>Status</th><th>Actions</th></tr></thead>
-          <tbody>
-            <tr><td><div class="td-name">Mr. Kamau</div><div class="td-muted">kamau@props.co.ke</div></td><td>+254 722 000 111</td><td>3</td><td>48</td><td><span class="status-pill pill-green">● Active</span></td><td><button class="action-btn">View</button> <button class="action-btn danger">Suspend</button></td></tr>
-            <tr><td><div class="td-name">Mrs. Njoki</div><div class="td-muted">njoki@gmail.com</div></td><td>+254 733 222 333</td><td>1</td><td>6</td><td><span class="status-pill pill-green">● Active</span></td><td><button class="action-btn">View</button> <button class="action-btn danger">Suspend</button></td></tr>
-            <tr><td><div class="td-name">Elm Properties Ltd</div><div class="td-muted">elm@props.co.ke</div></td><td>+254 711 444 555</td><td>2</td><td>52</td><td><span class="status-pill pill-red">● Suspended</span></td><td><button class="action-btn success" onclick="toast('Elm Properties reinstated')">Reinstate</button> <button class="action-btn danger" onclick="toast('Elm Properties banned')">Ban</button></td></tr>
-            <tr><td><div class="td-name">Nakuru Properties Ltd</div><div class="td-muted">info@nakuruprop.com</div></td><td>+254 700 666 777</td><td>0</td><td>0</td><td><span class="status-pill pill-amber">● Pending</span></td><td><button class="action-btn success" onclick="toast('Nakuru Properties approved')">Approve</button> <button class="action-btn danger">Reject</button></td></tr>
-          </tbody>
+          <thead><tr><th>Name</th><th>Contact</th><th>Listings</th><th>Status</th><th>Actions</th></tr></thead>
+          <tbody id="landlords-tbody">
         </table>
         </div>
       </div>
@@ -990,33 +974,44 @@ tr:hover td{background:rgba(255,255,255,.02)}
 <div class="modal-overlay" id="add-uni-modal">
   <div class="modal-box">
     <div class="modal-head"><h3>🎓 Add University</h3><button class="modal-close" onclick="closeModal('add-uni-modal')">×</button></div>
-    <div class="form-group"><label class="form-label">University Name</label><input class="form-input" placeholder="e.g. Egerton University"></div>
-    <div class="form-group"><label class="form-label">Location / City</label><input class="form-input" placeholder="Nakuru"></div>
+    <div class="form-group"><label class="form-label">University Name *</label><input class="form-input" id="a-uni-name" placeholder="e.g. Egerton University"></div>
+    <div class="form-group"><label class="form-label">Location / City</label><input class="form-input" id="a-uni-location" placeholder="Nakuru"></div>
     <div class="form-row-2">
-      <div class="form-group"><label class="form-label">Official Website</label><input class="form-input" placeholder="egerton.ac.ke"></div>
-      <div class="form-group"><label class="form-label">Contact Email</label><input class="form-input" placeholder="admin@egerton.ac.ke"></div>
+      <div class="form-group"><label class="form-label">Official Website</label><input class="form-input" id="a-uni-website" placeholder="egerton.ac.ke"></div>
+      <div class="form-group"><label class="form-label">Contact Email</label><input class="form-input" id="a-uni-contact" placeholder="admin@egerton.ac.ke"></div>
     </div>
-    <div class="form-group"><label class="form-label">Contact Person</label><input class="form-input" placeholder="Registrar Name"></div>
-    <button class="modal-submit" onclick="toast('University added ✓');closeModal('add-uni-modal')">Add University</button>
+    <button class="modal-submit" onclick="adminAddUni()">Add University</button>
   </div>
 </div>
 
-<!-- ADD HOSTEL -->
+<!-- ADD LISTING (admin) -->
 <div class="modal-overlay" id="add-hostel-modal">
   <div class="modal-box">
-    <div class="modal-head"><h3>🏢 Add Hostel</h3><button class="modal-close" onclick="closeModal('add-hostel-modal')">×</button></div>
-    <div class="form-group"><label class="form-label">Hostel Name</label><input class="form-input" placeholder="e.g. Green Valley Hostel"></div>
+    <div class="modal-head"><h3>🚪 Add Listing</h3><button class="modal-close" onclick="closeModal('add-hostel-modal')">×</button></div>
+    <div class="form-group"><label class="form-label">Room / Property Name *</label><input class="form-input" id="a-list-name" placeholder="e.g. Sunrise Hostel Room 4A"></div>
     <div class="form-row-2">
-      <div class="form-group"><label class="form-label">Location</label><input class="form-input" placeholder="Kilimani, Nairobi"></div>
-      <div class="form-group"><label class="form-label">Nearest University</label><input class="form-input" placeholder="University of Nairobi"></div>
+      <div class="form-group"><label class="form-label">Location / Area *</label><input class="form-input" id="a-list-location" placeholder="Westlands, Nairobi"></div>
+      <div class="form-group"><label class="form-label">Nearest University</label><input class="form-input" id="a-list-university" placeholder="University of Nairobi"></div>
     </div>
     <div class="form-row-2">
-      <div class="form-group"><label class="form-label">Distance from campus</label><input class="form-input" placeholder="0.8km"></div>
-      <div class="form-group"><label class="form-label">Total rooms</label><input type="number" class="form-input" placeholder="20"></div>
+      <div class="form-group"><label class="form-label">Distance from campus (km)</label><input class="form-input" id="a-list-distance" placeholder="1.2"></div>
+      <div class="form-group"><label class="form-label">Room Type</label>
+        <select class="form-input" id="a-list-type"><option>Single</option><option>Shared</option><option>Studio</option><option>Bedsitter</option><option>Apartment</option></select>
+      </div>
     </div>
-    <div class="form-group"><label class="form-label">Landlord / Owner</label><input class="form-input" placeholder="Mr. Kamau"></div>
-    <div class="form-group"><label class="form-label">Contact (WhatsApp)</label><input class="form-input" placeholder="+254 7XX XXX XXX"></div>
-    <button class="modal-submit" onclick="toast('Hostel added ✓');closeModal('add-hostel-modal')">Add Hostel</button>
+    <div class="form-row-2">
+      <div class="form-group"><label class="form-label">Monthly Rent (KES) *</label><input type="number" class="form-input" id="a-list-rent" placeholder="8500"></div>
+      <div class="form-group"><label class="form-label">Deposit (KES)</label><input type="number" class="form-input" id="a-list-deposit" placeholder="17000"></div>
+    </div>
+    <div class="form-row-2">
+      <div class="form-group"><label class="form-label">Available Slots *</label><input type="number" class="form-input" id="a-list-slots" placeholder="2"></div>
+      <div class="form-group"><label class="form-label">Gender Preference</label>
+        <select class="form-input" id="a-list-gender"><option>Any</option><option>Female only</option><option>Male only</option></select>
+      </div>
+    </div>
+    <div class="form-group"><label class="form-label">Amenities (comma separated)</label><input class="form-input" id="a-list-amenities" placeholder="WiFi, Furnished, Water 24h, Security, Kitchen"></div>
+    <div class="form-group"><label class="form-label">Landlord Contact (WhatsApp) *</label><input class="form-input" id="a-list-contact" placeholder="+254 7XX XXX XXX"></div>
+    <button class="modal-submit" onclick="adminAddListing()">✓ Add Listing — Goes Live Immediately</button>
   </div>
 </div>
 
@@ -1048,15 +1043,15 @@ tr:hover td{background:rgba(255,255,255,.02)}
   <div class="modal-box">
     <div class="modal-head"><h3>🔑 Add Landlord</h3><button class="modal-close" onclick="closeModal('add-landlord-modal')">×</button></div>
     <div class="form-row-2">
-      <div class="form-group"><label class="form-label">Full Name</label><input class="form-input" placeholder="John Otieno"></div>
-      <div class="form-group"><label class="form-label">Business Name</label><input class="form-input" placeholder="Otieno Properties (optional)"></div>
+      <div class="form-group"><label class="form-label">Full Name *</label><input class="form-input" id="a-land-name" placeholder="John Otieno"></div>
+      <div class="form-group"><label class="form-label">Business Name</label><input class="form-input" id="a-land-business" placeholder="Otieno Properties"></div>
     </div>
     <div class="form-row-2">
-      <div class="form-group"><label class="form-label">Email</label><input class="form-input" placeholder="john@email.com"></div>
-      <div class="form-group"><label class="form-label">Phone / WhatsApp</label><input class="form-input" placeholder="+254 7XX XXX XXX"></div>
+      <div class="form-group"><label class="form-label">Email</label><input class="form-input" id="a-land-email" placeholder="john@email.com"></div>
+      <div class="form-group"><label class="form-label">Phone / WhatsApp *</label><input class="form-input" id="a-land-phone" placeholder="+254 7XX XXX XXX"></div>
     </div>
-    <div class="form-group"><label class="form-label">ID / KRA PIN Number</label><input class="form-input" placeholder="For verification"></div>
-    <button class="modal-submit" onclick="toast('Landlord added ✓');closeModal('add-landlord-modal')">Add Landlord</button>
+    <div class="form-group"><label class="form-label">ID / KRA PIN</label><input class="form-input" id="a-land-id" placeholder="For verification"></div>
+    <button class="modal-submit" onclick="adminAddLandlord()">Add Landlord</button>
   </div>
 </div>
 
@@ -1078,6 +1073,14 @@ tr:hover td{background:rgba(255,255,255,.02)}
 <div class="toast" id="toast-el"><span id="toast-msg">Done</span></div>
 
 <script>
+// ══════════════════════════════════════════
+// UNINEST ADMIN — JSONBin Config
+// Replace these two values with your own
+// ══════════════════════════════════════════
+const BIN_ID  = 'UNINEST_BIN_ID';   // ← paste your bin ID here
+const API_KEY = 'UNINEST_API_KEY';  // ← paste your master key here
+const API_URL = `https://api.jsonbin.io/v3/b/${BIN_ID}`;
+
 // ── AUTH
 const ADMIN_EMAIL = 'admin@uninest.co.ke';
 const ADMIN_PASS  = 'Admin@2025';
@@ -1087,37 +1090,335 @@ function doLogin(){
   const p = document.getElementById('login-pass').value;
   if(e === ADMIN_EMAIL && p === ADMIN_PASS){
     document.getElementById('login-screen').style.display = 'none';
+    initDashboard();
   } else {
-    toast('Incorrect credentials. Try admin@uninest.co.ke / Admin@2025');
+    toast('Incorrect credentials.');
   }
 }
+function doLogout(){ document.getElementById('login-screen').style.display='flex'; }
+document.addEventListener('keydown',e=>{
+  if(e.key==='Enter' && document.getElementById('login-screen').style.display!=='none') doLogin();
+});
 
-function doLogout(){
-  document.getElementById('login-screen').style.display = 'flex';
+// ── JSONBIN HELPERS
+async function getData(){
+  try{
+    const r = await fetch(API_URL+'/latest',{headers:{'X-Master-Key':API_KEY}});
+    const j = await r.json();
+    return j.record || {listings:[],universities:[],students:[],landlords:[]};
+  }catch(e){ return {listings:[],universities:[],students:[],landlords:[]}; }
+}
+async function putData(data){
+  await fetch(API_URL,{
+    method:'PUT',
+    headers:{'Content-Type':'application/json','X-Master-Key':API_KEY},
+    body:JSON.stringify(data)
+  });
+}
+function esc(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function fmtDate(s){ return s ? new Date(s).toLocaleDateString('en-KE',{day:'numeric',month:'short',year:'numeric'}) : '—'; }
+
+// ── GLOBAL STATE
+let DB = {listings:[],universities:[],students:[],landlords:[]};
+
+// ── INIT
+async function initDashboard(){
+  toast('Loading data…');
+  DB = await getData();
+  refreshDashboard();
+  renderListingsTable();
+  renderUniversitiesTable();
+  renderStudentsTable();
+  renderLandlordsTable();
+  renderApprovalsQueue();
+  toast('✓ Data loaded');
+}
+
+// ── DASHBOARD STATS
+function refreshDashboard(){
+  const pending = DB.listings.filter(l=>!l.approved).length;
+  // update stat cards
+  safeSet('stat-listings', DB.listings.filter(l=>l.approved).length);
+  safeSet('stat-pending', pending);
+  safeSet('stat-unis', DB.universities.filter(u=>u.approved).length);
+  safeSet('stat-students', DB.students.length);
+  // update badge in sidebar
+  const badge = document.querySelector('.nav-item .badge');
+  if(badge) badge.textContent = pending;
+}
+function safeSet(id, val){
+  const el = document.getElementById(id);
+  if(el) el.textContent = val;
+}
+
+// ── LISTINGS TABLE
+function renderListingsTable(){
+  const tbody = document.getElementById('listings-tbody');
+  if(!tbody) return;
+  if(!DB.listings.length){
+    tbody.innerHTML = `<tr><td colspan="7" style="text-align:center;padding:32px;color:var(--muted)">No listings yet. Add one above.</td></tr>`;
+    return;
+  }
+  tbody.innerHTML = DB.listings.map((l,i) => `
+    <tr>
+      <td><div class="td-name">${esc(l.name)}</div><div class="td-muted">${esc(l.location)}</div></td>
+      <td>${esc(l.university||'—')}</td>
+      <td class="td-name">KES ${Number(l.rent||0).toLocaleString()}</td>
+      <td>${esc(l.gender||'Any')}</td>
+      <td><strong style="color:var(--green)">${l.slots||0}</strong></td>
+      <td>${l.approved
+        ? `<span class="status-pill pill-green">● Live</span>`
+        : `<span class="status-pill pill-amber">⏳ Pending</span>`}</td>
+      <td style="display:flex;gap:6px;flex-wrap:wrap">
+        ${!l.approved
+          ? `<button class="action-btn success" onclick="approveListing(${i})">✓ Approve</button>`
+          : `<button class="action-btn" onclick="toggleListingStatus(${i})">${l.approved?'Unpublish':'Publish'}</button>`}
+        <button class="action-btn danger" onclick="deleteListing(${i})">Delete</button>
+      </td>
+    </tr>`).join('');
+}
+
+async function approveListing(i){
+  DB.listings[i].approved = true;
+  await putData(DB);
+  renderListingsTable();
+  renderApprovalsQueue();
+  refreshDashboard();
+  toast('✓ Listing approved and now live!');
+}
+async function toggleListingStatus(i){
+  DB.listings[i].approved = !DB.listings[i].approved;
+  await putData(DB);
+  renderListingsTable();
+  refreshDashboard();
+  toast('Listing status updated.');
+}
+async function deleteListing(i){
+  if(!confirm('Delete this listing permanently?')) return;
+  DB.listings.splice(i,1);
+  await putData(DB);
+  renderListingsTable();
+  refreshDashboard();
+  toast('Listing deleted.');
+}
+
+// ── ADD LISTING (admin)
+async function adminAddListing(){
+  const name = document.getElementById('a-list-name').value.trim();
+  const location = document.getElementById('a-list-location').value.trim();
+  const university = document.getElementById('a-list-university').value.trim();
+  const rent = document.getElementById('a-list-rent').value.trim();
+  const deposit = document.getElementById('a-list-deposit').value.trim();
+  const slots = document.getElementById('a-list-slots').value.trim();
+  const contact = document.getElementById('a-list-contact').value.trim();
+  const gender = document.getElementById('a-list-gender').value;
+  const type = document.getElementById('a-list-type').value;
+  const distance = document.getElementById('a-list-distance').value.trim();
+  const amenitiesRaw = document.getElementById('a-list-amenities').value.trim();
+  const amenities = amenitiesRaw ? amenitiesRaw.split(',').map(s=>s.trim()).filter(Boolean) : [];
+
+  if(!name||!location||!rent||!contact){
+    toast('Please fill in all required fields (*)');return;
+  }
+  DB.listings = DB.listings||[];
+  DB.listings.unshift({
+    id:'lst_'+Date.now(), name, location, university, rent, deposit,
+    slots, contact, gender, type, distance, amenities,
+    verified:true, approved:true,
+    addedAt:new Date().toISOString()
+  });
+  await putData(DB);
+  closeModal('add-hostel-modal');
+  renderListingsTable();
+  refreshDashboard();
+  toast('✓ Listing added and live!');
+  // clear fields
+  ['a-list-name','a-list-location','a-list-university','a-list-rent','a-list-deposit','a-list-slots','a-list-contact','a-list-distance','a-list-amenities']
+    .forEach(id=>{ const el=document.getElementById(id); if(el) el.value=''; });
+}
+
+// ── UNIVERSITIES TABLE
+function renderUniversitiesTable(){
+  const tbody = document.getElementById('uni-tbody');
+  if(!tbody) return;
+  if(!DB.universities.length){
+    tbody.innerHTML = `<tr><td colspan="6" style="text-align:center;padding:32px;color:var(--muted)">No universities yet.</td></tr>`;
+    return;
+  }
+  tbody.innerHTML = DB.universities.map((u,i)=>`
+    <tr>
+      <td><div class="td-name">${esc(u.name)}</div><div class="td-muted">${esc(u.website||'')}</div></td>
+      <td>${esc(u.location||'—')}</td>
+      <td>${esc(u.contact||'—')}</td>
+      <td>${u.approved?`<span class="status-pill pill-green">● Active</span>`:`<span class="status-pill pill-amber">⏳ Pending</span>`}</td>
+      <td class="td-muted">${fmtDate(u.addedAt)}</td>
+      <td style="display:flex;gap:6px">
+        ${!u.approved?`<button class="action-btn success" onclick="approveUni(${i})">✓ Approve</button>`:''}
+        <button class="action-btn danger" onclick="deleteUni(${i})">Remove</button>
+      </td>
+    </tr>`).join('');
+}
+
+async function approveUni(i){
+  DB.universities[i].approved=true;
+  await putData(DB); renderUniversitiesTable(); refreshDashboard(); toast('✓ University approved!');
+}
+async function deleteUni(i){
+  if(!confirm('Remove this university?')) return;
+  DB.universities.splice(i,1);
+  await putData(DB); renderUniversitiesTable(); toast('University removed.');
+}
+async function adminAddUni(){
+  const name=document.getElementById('a-uni-name').value.trim();
+  const location=document.getElementById('a-uni-location').value.trim();
+  const website=document.getElementById('a-uni-website').value.trim();
+  const contact=document.getElementById('a-uni-contact').value.trim();
+  if(!name){ toast('University name required'); return; }
+  DB.universities=DB.universities||[];
+  DB.universities.unshift({id:'uni_'+Date.now(),name,location,website,contact,approved:true,addedAt:new Date().toISOString()});
+  await putData(DB);
+  closeModal('add-uni-modal');
+  renderUniversitiesTable(); refreshDashboard();
+  toast('✓ University added!');
+}
+
+// ── STUDENTS TABLE
+function renderStudentsTable(){
+  const tbody = document.getElementById('students-tbody');
+  if(!tbody) return;
+  if(!DB.students.length){
+    tbody.innerHTML=`<tr><td colspan="6" style="text-align:center;padding:32px;color:var(--muted)">No students registered yet.</td></tr>`;
+    return;
+  }
+  tbody.innerHTML = DB.students.map((s,i)=>`
+    <tr>
+      <td><div class="td-name">${esc(s.name)}</div><div class="td-muted">${esc(s.email||'')}</div></td>
+      <td>${esc(s.university||'—')}</td>
+      <td><span class="tag">${esc(s.type||'Local')}</span></td>
+      <td>${s.verified?`<span class="status-pill pill-green">✓ Verified</span>`:`<span class="status-pill pill-amber">Pending</span>`}</td>
+      <td class="td-muted">${fmtDate(s.registeredAt)}</td>
+      <td style="display:flex;gap:6px">
+        ${!s.verified?`<button class="action-btn success" onclick="verifyStudent(${i})">Verify</button>`:''}
+        <button class="action-btn danger" onclick="deleteStudent(${i})">Remove</button>
+      </td>
+    </tr>`).join('');
+}
+async function verifyStudent(i){
+  DB.students[i].verified=true;
+  await putData(DB); renderStudentsTable(); toast('✓ Student verified!');
+}
+async function deleteStudent(i){
+  if(!confirm('Remove this student?')) return;
+  DB.students.splice(i,1);
+  await putData(DB); renderStudentsTable(); refreshDashboard(); toast('Student removed.');
+}
+
+// ── LANDLORDS TABLE
+function renderLandlordsTable(){
+  const tbody=document.getElementById('landlords-tbody');
+  if(!tbody) return;
+  if(!DB.landlords.length){
+    tbody.innerHTML=`<tr><td colspan="5" style="text-align:center;padding:32px;color:var(--muted)">No landlords yet.</td></tr>`;
+    return;
+  }
+  tbody.innerHTML=DB.landlords.map((l,i)=>`
+    <tr>
+      <td><div class="td-name">${esc(l.name)}</div><div class="td-muted">${esc(l.email||'')}</div></td>
+      <td>${esc(l.phone||'—')}</td>
+      <td>${DB.listings.filter(ls=>ls.contact===l.phone).length}</td>
+      <td>${l.approved?`<span class="status-pill pill-green">● Active</span>`:`<span class="status-pill pill-amber">Pending</span>`}</td>
+      <td style="display:flex;gap:6px">
+        ${!l.approved?`<button class="action-btn success" onclick="approveLandlord(${i})">Approve</button>`:''}
+        <button class="action-btn danger" onclick="deleteLandlord(${i})">Remove</button>
+      </td>
+    </tr>`).join('');
+}
+async function approveLandlord(i){
+  DB.landlords[i].approved=true;
+  await putData(DB); renderLandlordsTable(); toast('✓ Landlord approved!');
+}
+async function deleteLandlord(i){
+  if(!confirm('Remove this landlord?')) return;
+  DB.landlords.splice(i,1);
+  await putData(DB); renderLandlordsTable(); toast('Landlord removed.');
+}
+async function adminAddLandlord(){
+  const name=document.getElementById('a-land-name').value.trim();
+  const business=document.getElementById('a-land-business').value.trim();
+  const email=document.getElementById('a-land-email').value.trim();
+  const phone=document.getElementById('a-land-phone').value.trim();
+  const id=document.getElementById('a-land-id').value.trim();
+  if(!name||!phone){toast('Name and phone required');return;}
+  DB.landlords=DB.landlords||[];
+  DB.landlords.unshift({id:'lnd_'+Date.now(),name,business,email,phone,idNumber:id,approved:true,addedAt:new Date().toISOString()});
+  await putData(DB);
+  closeModal('add-landlord-modal');
+  renderLandlordsTable(); toast('✓ Landlord added!');
+}
+
+// ── APPROVALS QUEUE
+function renderApprovalsQueue(){
+  const container = document.getElementById('approvals-list');
+  if(!container) return;
+  const pending = DB.listings.filter(l=>!l.approved);
+  if(!pending.length){
+    container.innerHTML='<div style="text-align:center;padding:40px;color:var(--muted)">🎉 No pending approvals!</div>';
+    return;
+  }
+  // keep existing static queue items but prepend real ones
+  const realItems = pending.map((l,i)=>`
+    <div class="queue-item" id="ql-${l.id}">
+      <div class="queue-icon">🚪</div>
+      <div class="queue-info">
+        <div class="queue-name">${esc(l.name)}</div>
+        <div class="queue-meta">Listing · ${esc(l.location)} · Contact: ${esc(l.contact)} · submitted ${fmtDate(l.submittedAt||l.addedAt)}</div>
+        <div class="queue-btns">
+          <button class="action-btn success" onclick="approveListingById('${l.id}')">✓ Approve</button>
+          <button class="action-btn danger" onclick="deleteListingById('${l.id}')">✕ Reject</button>
+        </div>
+      </div>
+    </div>`).join('');
+  // update pending count
+  safeSet('pending-count', pending.length);
+  const firstChild = container.querySelector('.table-header');
+  if(firstChild) firstChild.insertAdjacentHTML('afterend', realItems);
+}
+
+async function approveListingById(id){
+  const idx = DB.listings.findIndex(l=>l.id===id);
+  if(idx<0) return;
+  DB.listings[idx].approved=true;
+  await putData(DB);
+  const el=document.getElementById('ql-'+id);
+  if(el){el.style.opacity='.4';el.style.pointerEvents='none';}
+  renderListingsTable(); refreshDashboard();
+  toast('✓ Listing approved and live!');
+}
+async function deleteListingById(id){
+  DB.listings = DB.listings.filter(l=>l.id!==id);
+  await putData(DB);
+  const el=document.getElementById('ql-'+id);
+  if(el){el.style.opacity='.4';el.style.pointerEvents='none';}
+  renderListingsTable(); refreshDashboard();
+  toast('Listing rejected and removed.');
 }
 
 // ── PANELS
-const panelTitles = {
+const panelTitles={
   dashboard:'Dashboard',analytics:'Analytics',activity:'Activity Feed',
-  universities:'Universities',students:'Students',hostels:'Hostels & Properties',
+  universities:'Universities',students:'Students',hostels:'Listings',
   rooms:'Rooms',landlords:'Landlords',approvals:'Approvals',
   reports:'Reports',verification:'Verification',revenue:'Revenue',
   community:'Community',settings:'Settings'
 };
-
-function showPanel(id, btn){
+function showPanel(id,btn){
   document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.nav-item').forEach(b=>b.classList.remove('active'));
-  const panel = document.getElementById('panel-'+id);
+  const panel=document.getElementById('panel-'+id);
   if(panel) panel.classList.add('active');
   if(btn) btn.classList.add('active');
-  else {
-    document.querySelectorAll('.nav-item').forEach(b=>{
-      if(b.textContent.trim().toLowerCase().includes(id.toLowerCase())) b.classList.add('active');
-    });
-  }
-  document.getElementById('page-title').textContent = panelTitles[id]||id;
-  document.getElementById('breadcrumb').textContent = 'UniNest → '+( panelTitles[id]||id);
+  document.getElementById('page-title').textContent=panelTitles[id]||id;
+  document.getElementById('breadcrumb').textContent='UniNest → '+(panelTitles[id]||id);
   closeSidebar();
 }
 
@@ -1139,51 +1440,24 @@ function toast(msg){
   document.getElementById('toast-msg').textContent=msg;
   el.classList.add('show');
   clearTimeout(toastT);
-  toastT=setTimeout(()=>el.classList.remove('show'),3000);
+  toastT=setTimeout(()=>el.classList.remove('show'),3500);
 }
-
-// ── APPROVALS
-let pendingCt = 8;
-let approvedCt = 12;
-
-function approveItem(id, name){
-  const el = document.getElementById(id);
-  if(el){ el.style.opacity='.4'; el.style.pointerEvents='none'; }
-  pendingCt = Math.max(0, pendingCt-1);
-  approvedCt++;
-  updateCounts();
-  toast('✓ '+name+' approved!');
-}
-function rejectItem(id){
-  const el = document.getElementById(id);
-  if(el){ el.style.opacity='.4'; el.style.pointerEvents='none'; }
-  pendingCt = Math.max(0, pendingCt-1);
-  updateCounts();
-  toast('Rejected and notified.');
-}
-function updateCounts(){
-  const pc = document.getElementById('pending-count');
-  const ac = document.getElementById('approved-count');
-  if(pc) pc.textContent = pendingCt;
-  if(ac) ac.textContent = approvedCt;
-}
-function approve(btn, name){ btn.closest('.queue-item').style.opacity='.4'; btn.closest('.queue-item').style.pointerEvents='none'; toast('✓ '+name+' approved!'); }
-function reject(btn){ btn.closest('.queue-item').style.opacity='.4'; btn.closest('.queue-item').style.pointerEvents='none'; toast('Rejected.'); }
 
 // ── SETTINGS TABS
-function settingsTab(btn, id){
+function settingsTab(btn,id){
   document.querySelectorAll('.settings-nav-item').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
   ['general','notifications','security','pricing'].forEach(t=>{
-    const el = document.getElementById('stab-'+t);
-    if(el) el.style.display = t===id?'block':'none';
+    const el=document.getElementById('stab-'+t);
+    if(el) el.style.display=t===id?'block':'none';
   });
 }
 
-// Enter key on login
-document.addEventListener('keydown',e=>{
-  if(e.key==='Enter' && document.getElementById('login-screen').style.display!=='none') doLogin();
-});
+// ── OLD APPROVAL HELPERS (for static queue items)
+function approve(btn,name){btn.closest('.queue-item').style.opacity='.4';btn.closest('.queue-item').style.pointerEvents='none';toast('✓ '+name+' approved!');}
+function reject(btn){btn.closest('.queue-item').style.opacity='.4';btn.closest('.queue-item').style.pointerEvents='none';toast('Rejected.');}
+function approveItem(id,name){const el=document.getElementById(id);if(el){el.style.opacity='.4';el.style.pointerEvents='none';}toast('✓ '+name+' approved!');}
+function rejectItem(id){const el=document.getElementById(id);if(el){el.style.opacity='.4';el.style.pointerEvents='none';}toast('Rejected.');}
 </script>
 </body>
 </html>
